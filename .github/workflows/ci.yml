@@ -29,7 +29,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v5.3.1
+      - uses: wagoid/commitlint-github-action@v6.2.1
 
   test:
     strategy:
@@ -48,13 +48,13 @@ jobs:
           - "use_cython"
     runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
           allow-prereleases: true
-      - uses: snok/install-poetry@v1.3.3
+      - uses: snok/install-poetry@v1.4.1
       - name: Install Dependencies
         run: |
           if [ "${{ matrix.extension }}" = "skip_cython" ]; then
@@ -67,7 +67,7 @@ jobs:
         run: poetry run pytest --cov-report=xml
         shell: bash
       - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v5
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
@@ -75,11 +75,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Python 3.12
+      - name: Setup Python 3.13
         uses: actions/setup-python@v5
         with:
-          python-version: 3.12
-      - uses: snok/install-poetry@v1.3.4
+          python-version: 3.13
+      - uses: snok/install-poetry@v1.4.1
       - name: Install Dependencies
         run: |
           REQUIRE_CYTHON=1 poetry install --only=main,dev
@@ -137,7 +137,7 @@ jobs:
       # - Create GitHub release
       # - Publish to PyPI
       - name: Python Semantic Release
-        uses: python-semantic-release/python-semantic-release@v7.34.6
+        uses: python-semantic-release/python-semantic-release@v9.20.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pypi_token: ${{ secrets.PYPI_TOKEN }}
@@ -213,7 +213,7 @@ jobs:
           path: dist
           merge-multiple: true
 
-      - uses: pypa/gh-action-pypi-publish@v1.12.3
+      - uses: pypa/gh-action-pypi-publish@v1.12.4
         with:
           user: __token__
           password: ${{ secrets.PYPI_TOKEN }}
