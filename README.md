@@ -1,11 +1,11 @@
 # FNV Hash Fast
 
 <p align="center">
-  <a href="https://github.com/bdraco/fnv-hash-fast/actions/workflows/ci.yml?query=branch%3Amain">
-    <img src="https://img.shields.io/github/actions/workflow/status/bdraco/fnv-hash-fast/ci.yml?branch=main&label=CI&logo=github&style=flat-square" alt="CI Status" >
+  <a href="https://github.com/bluetooth-devices/fnv-hash-fast/actions/workflows/ci.yml?query=branch%3Amain">
+    <img src="https://img.shields.io/github/actions/workflow/status/bluetooth-devices/fnv-hash-fast/ci.yml?branch=main&label=CI&logo=github&style=flat-square" alt="CI Status" >
   </a>
-  <a href="https://codecov.io/gh/bdraco/fnv-hash-fast">
-    <img src="https://img.shields.io/codecov/c/github/bdraco/fnv-hash-fast.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
+  <a href="https://codecov.io/gh/bluetooth-devices/fnv-hash-fast">
+    <img src="https://img.shields.io/codecov/c/github/bluetooth-devices/fnv-hash-fast.svg?logo=codecov&logoColor=fff&style=flat-square" alt="Test coverage percentage">
   </a>
 </p>
 <p align="center">
@@ -18,7 +18,7 @@
   <a href="https://github.com/pre-commit/pre-commit">
     <img src="https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white&style=flat-square" alt="pre-commit">
   </a>
-  <a href="https://codspeed.io/bdraco/fnv-hash-fast"><img src="https://img.shields.io/endpoint?url=https://codspeed.io/badge.json" alt="CodSpeed Badge"/></a>
+  <a href="https://codspeed.io/bluetooth-devices/fnv-hash-fast"><img src="https://img.shields.io/endpoint?url=https://codspeed.io/badge.json" alt="CodSpeed Badge"/></a>
 </p>
 <p align="center">
   <a href="https://pypi.org/project/fnv-hash-fast/">
