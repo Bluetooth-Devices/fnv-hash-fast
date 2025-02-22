@@ -5,7 +5,7 @@ description = "A fast version of fnv1a"
 authors = ["J. Nick Koston <nick@koston.org>"]
 license = "MIT"
 readme = "README.md"
-repository = "https://github.com/bdraco/fnv-hash-fast"
+repository = "https://github.com/bluetooth-devices/fnv-hash-fast"
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
@@ -26,8 +26,8 @@ generate-setup-file = true
 script = "build_ext.py"
 
 [tool.poetry.urls]
-"Bug Tracker" = "https://github.com/bdraco/fnv-hash-fast/issues"
-"Changelog" = "https://github.com/bdraco/fnv-hash-fast/blob/main/CHANGELOG.md"
+"Bug Tracker" = "https://github.com/bluetooth-devices/fnv-hash-fast/issues"
+"Changelog" = "https://github.com/bluetooth-devices/fnv-hash-fast/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
