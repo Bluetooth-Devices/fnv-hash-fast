@@ -189,7 +189,8 @@ jobs:
             musl: "musllinux"
           - os: macos-latest
             musl: "musllinux"
-
+          - os: macos-13
+            musl: "musllinux"
     steps:
       - uses: actions/checkout@v4
         with:
