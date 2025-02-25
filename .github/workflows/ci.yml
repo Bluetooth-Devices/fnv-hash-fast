@@ -225,7 +225,8 @@ jobs:
     needs: [build_wheels]
     runs-on: ubuntu-latest
     environment: release
-
+    permissions:
+      id-token: write # IMPORTANT: this permission is mandatory for trusted publishing
     steps:
       - uses: actions/download-artifact@v4
         with:
@@ -236,8 +237,3 @@ jobs:
           merge-multiple: true
 
       - uses: pypa/gh-action-pypi-publish@v1.12.4
-        with:
-          user: __token__
-          password: ${{ secrets.PYPI_TOKEN }}
-
-          # To test: repository_url: https://test.pypi.org/legacy/
