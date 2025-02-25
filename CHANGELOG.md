@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v1.2.4 (2025-02-25)
+
+### Bug Fixes
+
+- Re-release to fix missing source distribution
+  ([#51](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/51),
+  [`40b7adb`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/40b7adb56e5bfd24056b830a78c9f2b6eb88f1b6))
+
+### Chores
+
+- Remove funding ([#49](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/49),
+  [`1556476`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/1556476ece525a14fe9c0577ea4518fca91c18b4))
+
+- **pre-commit.ci**: Pre-commit autoupdate
+  ([#50](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/50),
+  [`1b832c4`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/1b832c411d3a18815288be2f2e2d04843feac98f))
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+
+
 ## v1.2.3 (2025-02-22)
 
 ### Bug Fixes
