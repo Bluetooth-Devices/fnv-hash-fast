@@ -1,6 +1,26 @@
 # CHANGELOG
 
 
+## v1.2.6 (2025-02-25)
+
+### Bug Fixes
+
+- Use trusted publishing to upload wheels
+  ([#54](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/54),
+  [`5cd38d0`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/5cd38d038b09ba6e6ac948d28fff3f66eaec33f4))
+
+### Chores
+
+- Update dependabot.yml
+  ([`9b8a953`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/9b8a953d36782acd1187ce299b54e9ed08b723e3))
+
+- **ci**: Bump python-semantic-release/python-semantic-release from 9.20.0 to 9.21.0 in the
+  github-actions group ([#53](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/53),
+  [`560c47a`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/560c47aae4ca4d6304e0a08fb8352398986c527d))
+
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+
 ## v1.2.5 (2025-02-25)
 
 ### Bug Fixes
