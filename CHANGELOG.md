@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.2.5 (2025-02-25)
+
+### Bug Fixes
+
+- Add x86_64 macos wheel builds ([#52](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/52),
+  [`1ca2b27`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/1ca2b27ceb4b314e82223963ec47f9050cb42b6a))
+
+
 ## v1.2.4 (2025-02-25)
 
 ### Bug Fixes
