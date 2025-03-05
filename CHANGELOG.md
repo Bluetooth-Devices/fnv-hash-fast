@@ -1,6 +1,14 @@
 # CHANGELOG
 
 
+## v1.4.0 (2025-03-05)
+
+### Features
+
+- Add armv7l wheels ([#59](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/59),
+  [`225305d`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/225305da5de2ead4af699060fb8b8d7c0ac67671))
+
+
 ## v1.3.0 (2025-03-05)
 
 ### Chores
