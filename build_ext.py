@@ -16,6 +16,7 @@ ulid_module = Extension(
         join("src", "fnv_hash_fast", "_fnv_impl.pyx"),
     ],
     language="c",
+    extra_compile_args=["-O3", "-g0"],
 )
 
 
