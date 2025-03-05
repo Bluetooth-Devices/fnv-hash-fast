@@ -1,6 +1,34 @@
 # CHANGELOG
 
 
+## v1.3.0 (2025-03-05)
+
+### Chores
+
+- Update release workflow for newer PSR
+  ([#58](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/58),
+  [`f42033a`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/f42033a0da856b32248edf345b7a7a9f42425ced))
+
+- **deps-dev**: Bump pytest from 8.3.4 to 8.3.5
+  ([#56](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/56),
+  [`95f13d8`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/95f13d8c735908bfb1482afc780206106232f5a6))
+
+Signed-off-by: dependabot[bot] <support@github.com>
+
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+- **pre-commit.ci**: Pre-commit autoupdate
+  ([#55](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/55),
+  [`4bae23f`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/4bae23f6f7e45575a07e4c8d41428f85d0d0a825))
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+
+### Features
+
+- Optimize wheel builds ([#57](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/57),
+  [`8d3198d`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/8d3198db1331fcff411a078f0997682ac0fec27e))
+
+
 ## v1.2.6 (2025-02-25)
 
 ### Bug Fixes
