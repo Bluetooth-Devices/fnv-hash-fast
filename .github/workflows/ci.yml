@@ -249,7 +249,6 @@ jobs:
         uses: pypa/cibuildwheel@v2.23.0
         env:
           CIBW_SKIP: cp36-* cp37-* cp38-* cp39-* cp310-* pp* ${{ matrix.musl == 'musllinux' && '*manylinux*' || '*musllinux*' }}
-          CIBW_BEFORE_ALL_LINUX: apt-get install -y gcc || yum install -y gcc || apk add gcc
           REQUIRE_CYTHON: 1
 
       - uses: actions/upload-artifact@v4
