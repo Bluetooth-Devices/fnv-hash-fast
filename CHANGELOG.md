@@ -1,6 +1,49 @@
 # CHANGELOG
 
 
+## v1.5.0 (2025-04-23)
+
+### Chores
+
+- **ci**: Bump pypa/cibuildwheel from 2.23.0 to 2.23.1 in the github-actions group
+  ([#60](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/60),
+  [`c15de09`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/c15de094f63fb35c627e0e965b4e0e50202b4464))
+
+- **ci**: Bump pypa/cibuildwheel from 2.23.1 to 2.23.2 in the github-actions group
+  ([#62](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/62),
+  [`05fe4af`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/05fe4af04ac2cb434a3a35b72b62fe6e9fbcbbd6))
+
+- **deps-dev**: Bump pytest-cov from 6.0.0 to 6.1.1
+  ([#64](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/64),
+  [`e549bff`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/e549bff46a0459b3d0b218056a0eae7e19c659b0))
+
+Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+- **pre-commit.ci**: Pre-commit autoupdate
+  ([#61](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/61),
+  [`34258a0`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/34258a06cb669fda879ebcbaa3727676835e5ada))
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+
+- **pre-commit.ci**: Pre-commit autoupdate
+  ([#63](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/63),
+  [`433f1d4`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/433f1d4ac35a91611094af3a3d014062c910e93b))
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+
+- **pre-commit.ci**: Pre-commit autoupdate
+  ([#65](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/65),
+  [`39b949e`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/39b949e46607f758cee002af3d91cbcaa9d9f061))
+
+Co-authored-by: pre-commit-ci[bot] <66853113+pre-commit-ci[bot]@users.noreply.github.com>
+
+### Features
+
+- Significantly improve performance with large payloads
+  ([#66](https://github.com/Bluetooth-Devices/fnv-hash-fast/pull/66),
+  [`7a95a6c`](https://github.com/Bluetooth-Devices/fnv-hash-fast/commit/7a95a6c7b10706ff8d5a6b6bebbfe49d876e3053))
+
+
 ## v1.4.0 (2025-03-05)
 
 ### Features
