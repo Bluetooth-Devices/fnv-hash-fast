@@ -31,7 +31,7 @@ script = "build_ext.py"
 
 [tool.poetry.dependencies]
 python = "^3.10"
-fnvhash = "^0.1.0"
+fnvhash = ">=0.1,<0.3"
 
 [tool.poetry.group.dev.dependencies]
 pytest = ">=7,<9"

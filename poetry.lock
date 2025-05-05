@@ -199,13 +199,14 @@ test = ["pytest (>=6)"]
 
 [[package]]
 name = "fnvhash"
-version = "0.1.0"
-description = "Pure Python FNV hash implementation"
+version = "0.2.1"
+description = "Pure Python FNV hash implementation."
 optional = false
-python-versions = "*"
+python-versions = ">=3.9"
 groups = ["main"]
 files = [
-    {file = "fnvhash-0.1.0.tar.gz", hash = "sha256:3e82d505054f9f3987b2b5b649f7e7b6f48349f6af8a1b8e4d66779699c85a8e"},
+    {file = "fnvhash-0.2.1-py3-none-any.whl", hash = "sha256:00fab14bec841e4cb29b4fd2ed9358f8bf9f4600d9d8149cde27a191193a33e8"},
+    {file = "fnvhash-0.2.1.tar.gz", hash = "sha256:0c7e885f44c8f06de07f442befebc590ee9ca0cc88846681f608496284ce9cd5"},
 ]
 
 [[package]]
@@ -435,4 +436,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.10"
-content-hash = "7bad04f0c640f5db625879d45f0c882eee675bcfdef6fcc2852013e2f3f0356e"
+content-hash = "ced722d06723ea55a0a02a12e4337d1cf0eed679c79a3ae9cf8dbf7fc0d137c1"
