@@ -102,7 +102,7 @@ jobs:
           branch: v3.22
       - name: Set up Python
         run: |
-          apk add gcc musl-dev python3-dev py3-pip poetry
+          apk add gcc musl-dev python3-dev py3-pip poetry libffi-dev
         shell: alpine.sh --root {0}
       - name: Install Dependencies
         run: |
