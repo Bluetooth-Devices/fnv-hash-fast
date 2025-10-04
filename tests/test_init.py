@@ -12,6 +12,7 @@ def test_fnv1a_32():
 
 def test_fnvhash_fnv1a_32():
     for test_data in (
+        b"",
         b"hello",
         b"goodbye",
         b"goodbye" * 4096,
