@@ -1,20 +1,24 @@
-[tool.poetry]
+[project]
 name = "fnv-hash-fast"
 version = "1.5.0"
-description = "A fast version of fnv1a"
-authors = ["J. Nick Koston <nick@koston.org>"]
 license = "MIT"
+description = "A fast version of fnv1a"
 readme = "README.md"
-repository = "https://github.com/bluetooth-devices/fnv-hash-fast"
+authors = [{ name = "J. Nick Koston", email = "nick@koston.org" }]
+requires-python = ">=3.10"
+
+[project.urls]
+"Repository" = "https://github.com/bluetooth-devices/fnv-hash-fast"
+"Bug Tracker" = "https://github.com/bluetooth-devices/fnv-hash-fast/issues"
+"Changelog" = "https://github.com/bluetooth-devices/fnv-hash-fast/blob/main/CHANGELOG.md"
+
+[tool.poetry]
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries",
-    "Programming Language :: Python :: 3.11",
-    "Programming Language :: Python :: 3.12",
-    "Programming Language :: Python :: 3.13",
 ]
 packages = [
     { include = "fnv_hash_fast", from = "src" },
@@ -24,10 +28,6 @@ exclude = [ "**/*.c" ]
 [tool.poetry.build]
 generate-setup-file = true
 script = "build_ext.py"
-
-[tool.poetry.urls]
-"Bug Tracker" = "https://github.com/bluetooth-devices/fnv-hash-fast/issues"
-"Changelog" = "https://github.com/bluetooth-devices/fnv-hash-fast/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
 python = "^3.10"
@@ -40,7 +40,7 @@ pytest-codspeed = ">=3.1.2,<5.0.0"
 
 [tool.semantic_release]
 branch = "main"
-version_toml = ["pyproject.toml:tool.poetry.version"]
+version_toml = ["pyproject.toml:project.version"]
 version_variables = ["src/fnv_hash_fast/__init__.py:__version__"]
 build_command = "pip install poetry && poetry build"
 
@@ -84,5 +84,5 @@ allow_untyped_defs = true
 
 
 [build-system]
-requires = ['setuptools>=65.4.1', 'wheel', 'Cython>=3', "poetry-core>=1.0.0"]
+requires = ['setuptools>=77.0', 'Cython>=3', "poetry-core>=2.1.0"]
 build-backend = "poetry.core.masonry.api"
