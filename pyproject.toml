@@ -84,5 +84,5 @@ allow_untyped_defs = true
 
 
 [build-system]
-requires = ['setuptools>=77.0', 'Cython>=3', "poetry-core>=2.1.0"]
+requires = ['setuptools>=77.0', "poetry-core>=2.1.0"]
 build-backend = "poetry.core.masonry.api"
