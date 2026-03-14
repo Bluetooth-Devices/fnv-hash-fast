@@ -29,7 +29,7 @@ class BuildExt(build_ext):
 
 
 def build(setup_kwargs: Any) -> None:
-    if os.environ.get("SKIP_CYTHON", False):
+    if os.environ.get("SKIP_CYTHON", False) or os.environ.get("SKIP_EXTENSION", False):
         return
     try:
         setup_kwargs.update(
@@ -39,6 +39,6 @@ def build(setup_kwargs: Any) -> None:
             )
         )
     except Exception:
-        if os.environ.get("REQUIRE_CYTHON"):
+        if os.environ.get("REQUIRE_CYTHON") or os.environ.get("REQUIRE_EXTENSION"):
             raise
         pass
