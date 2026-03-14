@@ -23,7 +23,7 @@ classifiers = [
 packages = [
     { include = "fnv_hash_fast", from = "src" },
 ]
-exclude = [ "**/*.c" ]
+include = [ { path = "src/fnv_hash_fast/_fnv_impl.c", format = "sdist" } ]
 
 [tool.poetry.build]
 generate-setup-file = true

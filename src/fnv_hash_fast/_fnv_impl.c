@@ -1,3 +1,4 @@
+#include <stdint.h>
 #include "Python.h"
 
 static inline uint32_t
