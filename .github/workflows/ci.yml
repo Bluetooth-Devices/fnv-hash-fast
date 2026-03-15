@@ -174,10 +174,7 @@ jobs:
         qemu: [""]
         musl: [""]
         pyver: [""]
-        macos_arch: [""]
         include:
-          - os: macos-latest
-            macos_arch: x86_64
           - os: ubuntu-latest
             musl: "musllinux"
           - os: ubuntu-24.04-arm
@@ -238,10 +235,6 @@ jobs:
             # use default "auto" otherwise
             echo "CIBW_ARCHS_LINUX=${{ matrix.qemu }}" >> $GITHUB_ENV
           fi
-      - name: Set macOS architecture
-        if: ${{ matrix.macos_arch }}
-        run: |
-          echo "CIBW_ARCHS_MACOS=${{ matrix.macos_arch }}" >> $GITHUB_ENV
       - name: Limit to a specific Python version on slow QEMU
         if: ${{ matrix.pyver }}
         run: |
@@ -256,7 +249,7 @@ jobs:
 
       - uses: actions/upload-artifact@v6
         with:
-          name: wheels-${{ matrix.os }}-${{ matrix.musl }}-${{ matrix.pyver }}-${{ matrix.qemu }}-${{ matrix.macos_arch }}
+          name: wheels-${{ matrix.os }}-${{ matrix.musl }}-${{ matrix.pyver }}-${{ matrix.qemu }}
           path: ./wheelhouse/*.whl
 
   upload_pypi:
