@@ -13,8 +13,6 @@ fnv1a_32 = partial(
 )
 
 try:
-    from ._fnv_impl import (  # type: ignore[no-redef] # noqa: F811 F401
-        _fnv1a_32 as fnv1a_32,
-    )
+    from ._fnv_impl import _fnv1a_32 as fnv1a_32  # type: ignore[no-redef] # noqa: F811 F401
 except ImportError:
     pass
