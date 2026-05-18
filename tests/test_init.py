@@ -48,3 +48,12 @@ def test_ha_compat_hash():
         )
         == 2209002508
     )
+
+
+def test_fnv1a_32_gil_release_threshold_boundary():
+    # The C extension releases the GIL at FNV_GIL_RELEASE_THRESHOLD (4096).
+    # Verify outputs match the pure-Python reference just below, at, and just
+    # above the boundary.
+    for size in (4095, 4096, 4097, 8192):
+        payload = bytes(i & 0xFF for i in range(size))
+        assert fnv1a_32(payload) == fnvhash_fnv1a_32(payload)
