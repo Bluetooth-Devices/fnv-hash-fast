@@ -21,6 +21,7 @@ def fnv1a_32(data: Union[bytes, bytearray, memoryview]) -> int:
         data, hval_init=FNV1_32_INIT, fnv_prime=FNV_32_PRIME, fnv_size=_FNV_SIZE
     )
 
+
 try:
     from ._fnv_impl import _fnv1a_32 as fnv1a_32  # type: ignore[no-redef] # noqa: F811 F401
 except ImportError:
