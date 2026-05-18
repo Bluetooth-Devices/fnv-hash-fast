@@ -48,3 +48,40 @@ def test_ha_compat_hash():
         )
         == 2209002508
     )
+
+
+def test_fnv1a_32_bytearray():
+    assert fnv1a_32(bytearray(b"")) == 2166136261
+    assert fnv1a_32(bytearray(b"hello")) == 1335831723
+    assert fnv1a_32(bytearray(b"goodbye")) == 1188507472
+    assert fnv1a_32(bytearray(b"goodbye" * 4096)) == 386067909
+
+
+def test_fnv1a_32_memoryview():
+    assert fnv1a_32(memoryview(b"")) == 2166136261
+    assert fnv1a_32(memoryview(b"hello")) == 1335831723
+    assert fnv1a_32(memoryview(bytearray(b"goodbye"))) == 1188507472
+    assert fnv1a_32(memoryview(b"goodbye" * 4096)) == 386067909
+
+
+def test_fnv1a_32_memoryview_slice():
+    buf = memoryview(b"xxhelloxx")[2:7]
+    assert fnv1a_32(buf) == fnv1a_32(b"hello")
+
+
+def test_fnv1a_32_rejects_non_buffer():
+    import pytest
+
+    with pytest.raises(TypeError):
+        fnv1a_32("hello")  # type: ignore[arg-type]
+    with pytest.raises(TypeError):
+        fnv1a_32(42)  # type: ignore[arg-type]
+    with pytest.raises(TypeError):
+        fnv1a_32(None)  # type: ignore[arg-type]
+
+
+def test_fnv1a_32_bytes_subclass():
+    class MyBytes(bytes):
+        pass
+
+    assert fnv1a_32(MyBytes(b"hello")) == 1335831723
