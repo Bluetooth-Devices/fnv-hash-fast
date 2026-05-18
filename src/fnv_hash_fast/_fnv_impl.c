@@ -14,14 +14,18 @@ _fnv1a_32(const unsigned char *data, Py_ssize_t len)
 static PyObject *
 py_fnv1a_32(PyObject *module, PyObject *arg)
 {
-    if (!PyBytes_CheckExact(arg)) {
-        PyErr_SetString(PyExc_TypeError,
-                        "_fnv1a_32 requires a bytes object");
+    if (PyBytes_CheckExact(arg)) {
+        const unsigned char *buf = (const unsigned char *)PyBytes_AS_STRING(arg);
+        Py_ssize_t len = PyBytes_GET_SIZE(arg);
+        uint32_t h = _fnv1a_32(buf, len);
+        return PyLong_FromUnsignedLong(h);
+    }
+    Py_buffer view;
+    if (PyObject_GetBuffer(arg, &view, PyBUF_SIMPLE) != 0) {
         return NULL;
     }
-    const unsigned char *buf = (const unsigned char *)PyBytes_AS_STRING(arg);
-    Py_ssize_t len = PyBytes_GET_SIZE(arg);
-    uint32_t h = _fnv1a_32(buf, len);
+    uint32_t h = _fnv1a_32((const unsigned char *)view.buf, view.len);
+    PyBuffer_Release(&view);
     return PyLong_FromUnsignedLong(h);
 }
 
