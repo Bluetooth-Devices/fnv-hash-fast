@@ -8,19 +8,15 @@ if TYPE_CHECKING:
     fnv1a_32: Callable[[Union[bytes, bytearray, memoryview]], int]
 
 
-def fnv1a_32(data: Union[bytes, bytearray, memoryview]) -> int:
-    """Pure-Python FNV-1a 32-bit hash fallback.
-
-    The C extension accepts any buffer-protocol object directly; the pure-Python
-    path goes through ``fnvhash.fnva`` which only accepts ``bytes``, so
-    non-bytes buffer-like inputs are coerced via ``memoryview``.
-    """
+def _fnv1a_32_py(data: Union[bytes, bytearray, memoryview]) -> int:
     if not isinstance(data, bytes):
         data = bytes(memoryview(data))
-    return fnva(  # type: ignore[no-any-return]
+    return fnva(
         data, hval_init=FNV1_32_INIT, fnv_prime=FNV_32_PRIME, fnv_size=_FNV_SIZE
     )
 
+
+fnv1a_32 = _fnv1a_32_py
 
 try:
     from ._fnv_impl import _fnv1a_32 as fnv1a_32  # type: ignore[no-redef] # noqa: F811 F401
